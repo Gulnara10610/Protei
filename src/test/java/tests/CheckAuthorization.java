@@ -42,7 +42,8 @@ public class CheckAuthorization {
         authorizationPage.inputEmail(email)
                 .inputPassword(pass)
                 .clickButtonEnter();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
 
     }
 
@@ -69,7 +70,8 @@ public class CheckAuthorization {
                 .inputEmail(email)
                 .inputPassword(pass)
                 .clickButtonEnter();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
     }
 
 

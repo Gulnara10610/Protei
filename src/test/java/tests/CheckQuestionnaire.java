@@ -36,7 +36,8 @@ public class CheckQuestionnaire {
     void fillFormPositive(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(emailFaker)
                 .fillName(firstName)
                 .chooseVariant()
@@ -55,7 +56,8 @@ public class CheckQuestionnaire {
     void fillFormPositiveTwice(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(emailFaker)
                 .fillName(firstName)
                 .chooseVariant()
@@ -89,7 +91,8 @@ public class CheckQuestionnaire {
     void fillWrongEmailOnly(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(wrongEmail)
                 .buttonAdd();
         result.modalPopAppError();
@@ -99,7 +102,8 @@ public class CheckQuestionnaire {
     void fillOnlyEmail(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(emailFaker)
                 .buttonAdd();
         result.modalPopAppError();
@@ -109,7 +113,8 @@ public class CheckQuestionnaire {
     void fillOnlyName(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillName(firstName)
                 .buttonAdd();
         result.emailError();
@@ -120,7 +125,8 @@ public class CheckQuestionnaire {
     void clickTwiceRadioButton(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(rightEmail)
                 .fillName(firstName)
                 .chooseRadioButton1()
@@ -137,7 +143,8 @@ public class CheckQuestionnaire {
     void withOutEmailName(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.chooseGender()
                 .chooseGenderWoman()
                 .chooseVariant2()
@@ -149,7 +156,8 @@ public class CheckQuestionnaire {
     void withOutVariants(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(rightEmail)
                 .fillName(firstName)
                 .clickButtonAdd();
@@ -164,7 +172,8 @@ public class CheckQuestionnaire {
     void tooLoongEmail(){
         checkAuthorization.fillEmailPass();
         questionnaire.clickButtonAdd();
-        result.positiveAuth();
+        result.positiveAuth()
+                .checkLines();
         questionnaire.fillEmail(longEmail)
                 .fillName(firstName)
                 .chooseVariant2()
