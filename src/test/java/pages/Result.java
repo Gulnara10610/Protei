@@ -52,4 +52,8 @@ public class Result {
         $("td",4).shouldHave(text(value));
         return this;
     }
+    public Result closePopApp(){
+        $(".uk-alert-close.uk-close").click();
+        return this;
+    }
 }

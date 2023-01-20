@@ -70,19 +70,17 @@ public class CheckQuestionnaire {
                 .answerVariant(variant3)
                 .answerRadioButton(radioButton1);
 
-        questionnaire.clearEmail()
-                .fillEmail(rightEmail)
-                .clearName()
+        questionnaire.fillEmail(rightEmail)
                 .fillName(firstName)
                 .chooseVariant2()
                 .chooseRadioButton3()
                 .buttonAdd();
         result.modalPopApp()
-                .answer(rightEmail)
+                .answer(emailFaker)
                 .answerName(firstName)
                 .answerGender(genderMen)
                 .answerVariant(variant2)
-                .answerRadioButton(radioButton3)
+                .answerRadioButton(radioButton1)
                 .answerSecondRow(emailFaker,firstName,genderMen,variant2,radioButton3);
 
     }
@@ -160,6 +158,21 @@ public class CheckQuestionnaire {
                 .answerName(firstName)
                 .answerGender(genderMen)
                 .answerVariant(variant);
+    }
+    @Test
+    @DisplayName("Длинный неправильный емайл")
+    void tooLoongEmail(){
+        checkAuthorization.fillEmailPass();
+        questionnaire.clickButtonAdd();
+        result.positiveAuth();
+        questionnaire.fillEmail(longEmail)
+                .fillName(firstName)
+                .chooseVariant2()
+                .chooseRadioButton1()
+                .chooseGender()
+                .chooseGenderWoman()
+                .buttonAdd();
+        result.emailError();
     }
 
 

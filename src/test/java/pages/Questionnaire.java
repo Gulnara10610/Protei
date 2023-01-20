@@ -13,6 +13,7 @@ public class Questionnaire {
             emailFaker = faker.internet().safeEmailAddress(),
             wrongEmail = "fgdfg@dhggkj@.hjghj",
             wrongEmail2 = "fgdf g@dhggkj@ds.fdf.hjghj",
+            longEmail ="qwessscccccccccccccccccccczzzzzzzzzzzsssssssssssssssssssssssssszzzzzzzzzzzzzzzzzzddddddddddddd@vvvvvvvvvbbb.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr,rttt",
             rightEmail = "gulnara0706@mail.ru",
             genderWoman = "Женский",
             genderMen = "Мужской",

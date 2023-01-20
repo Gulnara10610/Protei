@@ -12,8 +12,10 @@ public class CheckAuthorization {
     AuthorizationPage authorizationPage = new AuthorizationPage();
     Result result = new Result();
 
-    private static String email = "test@protei.ru";
-    private static String pass = "test";
+    private static String email = "test@protei.ru",
+     pass = "test",
+    spaceEmail = " test@protei.ru",
+    spacePass = "test ";
 
     @BeforeAll
     static void configure() {
@@ -27,6 +29,21 @@ public class CheckAuthorization {
         authorizationPage.openPage()
                 .clickButtonEnter();
         result.emailError();
+    }
+    @Test
+    @DisplayName("Ввод емайл и пароля с пробелом ")
+    void withSpaceFields() {
+        authorizationPage.openPage()
+                .inputEmail(spaceEmail)
+                .inputPassword(spacePass)
+                .clickButtonEnter();
+        result.emailPassError()
+                .closePopApp();
+        authorizationPage.inputEmail(email)
+                .inputPassword(pass)
+                .clickButtonEnter();
+        result.positiveAuth();
+
     }
 
     @Test
