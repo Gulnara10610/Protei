@@ -13,11 +13,11 @@ public class TestBase {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        //DesiredCapabilities capabilities = new DesiredCapabilities();
-       // capabilities.setCapability("enableVNC", true);
-        //capabilities.setCapability("enableVideo", true);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
 
-        //Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "file:///C:/Users/79818/Downloads/Telegram%20Desktop/qa-test.html";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
